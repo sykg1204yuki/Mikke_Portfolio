@@ -1,0 +1,16 @@
+<h2>投稿一覧</h2>
+
+<% @post_images.each do |post_image| %>
+<div>
+  <%= attachment_image_tag post_image, :image, size:"200x200" %>
+  <p>
+    <%= post_image.user.name %>
+  </p>
+  <p>
+    <%= post_image.title %>
+  </p>
+  <p>
+    <%= post_image.caption %>
+  </p>
+</div>
+<% end %>
